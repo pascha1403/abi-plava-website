@@ -9,7 +9,7 @@
 *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--cream);color:var(--dark);line-height:1.6}a{text-decoration:none;color:inherit}
 .demo{background:#102d24;color:#fff;text-align:center;padding:8px;font-size:12px;letter-spacing:.08em}
 header{position:sticky;top:0;z-index:50;background:rgba(247,245,239,.96);backdrop-filter:blur(12px);border-bottom:1px solid #dce3dc}.nav{max-width:1180px;width:92%;margin:auto;height:76px;display:flex;align-items:center;justify-content:space-between}.logo{font-weight:900;font-size:21px;letter-spacing:.08em}.logo small{display:block;color:var(--g2);font-size:9px;letter-spacing:.2em}
-nav{display:flex;gap:3px;align-items:center}nav>a,.dropbtn{font-weight:700;font-size:14px;padding:12px 13px;border-radius:10px;cursor:pointer}nav>a:hover,.drop:hover .dropbtn{background:var(--sage)}.drop{position:relative}.menu{display:none;position:absolute;top:49px;left:0;min-width:220px;background:#fff;border:1px solid #dce3dc;border-radius:14px;box-shadow:0 18px 45px #123a2020;padding:7px}.drop:hover .menu{display:block}.menu a{display:block;padding:10px 12px;border-radius:9px;font-size:14px}.menu a:hover{background:var(--sage)}.contactbtn{background:var(--g);color:#fff!important}
+nav{display:flex;gap:3px;align-items:center}nav>a,.dropbtn{font-weight:700;font-size:14px;padding:12px 13px;border-radius:10px;cursor:pointer}nav>a:hover,.drop:hover .dropbtn,.drop.open .dropbtn{background:var(--sage)}.drop{position:relative}.menu{display:none;position:absolute;top:100%;left:0;min-width:220px;background:#fff;border:1px solid #dce3dc;border-radius:14px;box-shadow:0 18px 45px #123a2020;padding:7px;padding-top:10px}.drop:hover .menu,.drop.open .menu{display:block}.menu a{display:block;padding:10px 12px;border-radius:9px;font-size:14px}.menu a:hover{background:var(--sage)}.menu a{display:block;padding:10px 12px;border-radius:9px;font-size:14px}.menu a:hover{background:var(--sage)}.contactbtn{background:var(--g);color:#fff!important}
 .container{width:min(1180px,92%);margin:auto}section{padding:88px 0}.hero{min-height:650px;display:flex;align-items:center;background:linear-gradient(90deg,#102d24dc,#102d2450),url('https://images.unsplash.com/photo-1558904541-efa843a96f01?auto=format&fit=crop&w=1800&q=85') center/cover;color:#fff}.hero-inner{max-width:780px}.eyebrow,.kicker{font-size:12px;font-weight:900;letter-spacing:.16em;text-transform:uppercase}.hero h1{font-size:clamp(44px,7vw,78px);line-height:1;margin:18px 0}.hero p{font-size:20px;max-width:680px}.buttons{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}.btn{display:inline-block;padding:14px 21px;border-radius:999px;background:#fff;color:var(--g);font-weight:800}.btn.dark{background:var(--g);color:#fff}.btn.outline{background:transparent;border:1px solid #ffffff99;color:#fff}
 .head{max-width:730px;margin-bottom:40px}.head h2{font-size:clamp(32px,4vw,52px);line-height:1.08;margin:8px 0}.head p{color:var(--muted)}.kicker{color:var(--g2)}
 .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.card{background:#fff;border:1px solid #dce3dc;border-radius:22px;padding:27px;box-shadow:0 8px 25px #173f3210}.card .icon{width:46px;height:46px;border-radius:14px;background:var(--sage);display:grid;place-items:center;font-size:21px}.card h3{margin:12px 0 7px}.card p{margin:0;color:var(--muted)}
@@ -18,7 +18,7 @@ nav{display:flex;gap:3px;align-items:center}nav>a,.dropbtn{font-weight:700;font-
 .jobs{display:grid;gap:12px}.job{background:#fff;border:1px solid #dce3dc;border-radius:15px;padding:17px 20px;font-weight:800;display:flex;justify-content:space-between}
 .contactgrid{display:grid;grid-template-columns:1fr 1fr;gap:22px}.box{background:#fff;border:1px solid #dce3dc;border-radius:22px;padding:28px}.box a{color:var(--g2);font-weight:800}input,textarea{width:100%;padding:13px;border:1px solid #ccd7ce;border-radius:11px;margin:6px 0;font:inherit}
 footer{background:#12241e;color:#dce8df;padding:55px 0 22px}.foot{display:grid;grid-template-columns:2fr 1fr 1fr;gap:40px}.foot p,.foot a{color:#aebdb4}.copy{border-top:1px solid #31463d;margin-top:35px;padding-top:18px;font-size:12px}
-@media(max-width:850px){nav{display:none}.grid,.gallery,.split,.contactgrid,.foot{grid-template-columns:1fr}.hero{min-height:570px}.photo{height:350px}.stats{grid-template-columns:1fr 1fr}}
+@media(max-width:850px){nav{display:flex;gap:2px;overflow-x:auto;max-width:70vw}nav>a,.dropbtn{font-size:12px;padding:9px 8px;white-space:nowrap}.menu{position:fixed;top:94px;left:12px;right:12px;min-width:0}.grid,.gallery,.split,.contactgrid,.foot{grid-template-columns:1fr}.hero{min-height:570px}.photo{height:350px}.stats{grid-template-columns:1fr 1fr}}
 </style>
 </head>
 <body>
@@ -87,4 +87,23 @@ footer{background:#12241e;color:#dce8df;padding:55px 0 22px}.foot{display:grid;g
 </main>
 
 <footer><div class="container"><div class="foot"><div><h3>ABI PLAVA</h3><p>Professioneller Website-Entwurf mit Startseite, Unterbereichen, Leistungen, Projekten, Karriere und Kontakt.</p></div><div><h4>Navigation</h4><p><a href="#unternehmen">Unternehmen</a><br><a href="#leistungen">Leistungen</a><br><a href="#projekte">Projekte</a><br><a href="#karriere">Karriere</a></p></div><div><h4>Kontakt</h4><p><a href="tel:+491727447394">0172 7447394</a><br><a href="mailto:abi.plava@hotmail.de">abi.plava@hotmail.de</a></p></div></div><div class="copy">© ABI PLAVA · Website-Entwurf / Demo · Inhalte und Bilder vor Veröffentlichung prüfen</div></div></footer>
+
+<script>
+document.querySelectorAll('.dropbtn').forEach(btn=>{
+  btn.addEventListener('click', e=>{
+    e.preventDefault();
+    const current=btn.parentElement;
+    document.querySelectorAll('.drop.open').forEach(d=>{
+      if(d!==current) d.classList.remove('open');
+    });
+    current.classList.toggle('open');
+  });
+});
+document.addEventListener('click', e=>{
+  if(!e.target.closest('.drop')) document.querySelectorAll('.drop.open').forEach(d=>d.classList.remove('open'));
+});
+document.querySelectorAll('.menu a').forEach(a=>{
+  a.addEventListener('click',()=>document.querySelectorAll('.drop.open').forEach(d=>d.classList.remove('open')));
+});
+</script>
 </body></html>
