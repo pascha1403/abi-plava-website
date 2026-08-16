@@ -3,96 +3,88 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>ABI PLAVA – Garten & Landschaftsbau | Demo</title>
-<meta name="description" content="Unverbindlicher Website-Entwurf für ABI PLAVA in Baden-Baden.">
+<title>ABI PLAVA · Website-Entwurf</title>
 <style>
-:root{--green:#214f38;--green2:#356f4d;--lime:#d5e8a5;--sand:#f4f1e8;--ink:#18221c;--muted:#667168;--white:#fff;--line:#dfe5dc;--dark:#17251d}
-*{box-sizing:border-box;scroll-behavior:smooth}
-body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Arial,sans-serif;color:var(--ink);background:var(--sand);line-height:1.6}
-a{text-decoration:none;color:inherit}.wrap{width:min(1180px,calc(100% - 40px));margin:auto}
-header{position:sticky;top:0;z-index:30;background:rgba(255,255,255,.94);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
-.nav{min-height:76px;display:flex;align-items:center;justify-content:space-between;gap:20px}.logo{font-size:20px;font-weight:950;letter-spacing:-.04em}.logo span{display:block;color:var(--green2);font-size:10px;letter-spacing:.16em;margin-top:-2px}
-.menu{display:flex;align-items:center;gap:4px;flex-wrap:wrap;justify-content:flex-end}.menu button{border:0;background:transparent;padding:10px 12px;border-radius:10px;font:inherit;font-size:13px;font-weight:800;color:#47534b;cursor:pointer}.menu button:hover,.menu button.active{background:#edf3ea;color:var(--green)}
-.hero{min-height:76vh;display:grid;align-items:center;background:linear-gradient(120deg,#163326,#285c40);color:#fff;overflow:hidden;position:relative}
-.hero:before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 80% 15%,rgba(213,232,165,.25),transparent 28%),repeating-linear-gradient(115deg,rgba(255,255,255,.035) 0 2px,transparent 2px 24px)}
-.hero-grid{position:relative;display:grid;grid-template-columns:1.05fr .95fr;gap:55px;align-items:center;padding:88px 0}
-.eyebrow{font-size:12px;text-transform:uppercase;letter-spacing:.15em;font-weight:900;color:#b8d58e}.hero h1{font-size:clamp(44px,6.5vw,78px);line-height:.98;letter-spacing:-.065em;margin:16px 0}.hero h1 span{color:var(--lime)}.hero p{font-size:18px;color:#dce8df;max-width:650px}
-.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}.btn{display:inline-flex;align-items:center;justify-content:center;padding:13px 18px;border-radius:13px;font-weight:900;background:var(--lime);color:#1b2a1f;border:0;cursor:pointer}.btn.alt{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.18);color:#fff}
-.hero-photo{height:470px;border-radius:28px;overflow:hidden;border:1px solid rgba(255,255,255,.18);box-shadow:0 30px 90px rgba(0,0,0,.25)}.hero-photo img{width:100%;height:100%;object-fit:cover}
-section{display:none;padding:85px 0}.active{display:block}
-.head{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:38px}.head h2{font-size:clamp(34px,4.5vw,55px);line-height:1.03;letter-spacing:-.055em;margin:7px 0}.head p{max-width:600px;color:var(--muted);font-size:17px;margin:0}
-.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.card{background:#fff;border:1px solid var(--line);border-radius:22px;padding:26px;box-shadow:0 12px 35px rgba(26,48,34,.06)}.card h3{margin:10px 0 7px;font-size:21px}.card p{color:var(--muted);margin:0}.icon{font-size:29px}
-.photo{height:260px;border-radius:20px;overflow:hidden;background:#d9e0d8}.photo img{width:100%;height:100%;object-fit:cover}.caption{padding-top:13px;font-weight:850}.small{font-size:13px;color:var(--muted)}
-.dark{background:var(--dark);color:#fff}.dark .head p,.dark .card p{color:#c2cec6}.dark .card{background:#203027;border-color:#33483a}
-.two{display:grid;grid-template-columns:1fr 1fr;gap:24px}.feature{padding:35px;border-radius:24px;background:#fff;border:1px solid var(--line)}
-.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.step{background:#fff;border:1px solid var(--line);border-radius:18px;padding:22px}.num{font-size:12px;font-weight:900;color:var(--green2)}
-.gallery{display:grid;grid-template-columns:1.3fr .7fr;gap:18px}.gallery .photo:first-child{height:540px}.gallery-side{display:grid;gap:18px}.gallery-side .photo{height:261px}
-.contact{display:grid;grid-template-columns:1fr 1fr;gap:20px}.contactbox{background:#fff;border:1px solid var(--line);border-radius:22px;padding:28px}.contactbox p{color:var(--muted)}
-footer{background:#132019;color:#bfcac2;padding:32px 0;font-size:12px}
-.note{margin-top:20px;background:#fff7df;border:1px solid #ead7a3;border-radius:13px;padding:12px 14px;color:#6c5a2d;font-size:12px}
-@media(max-width:850px){.menu{display:none}.hero-grid,.two,.contact,.gallery{grid-template-columns:1fr}.hero-photo{height:320px}.grid3,.steps{grid-template-columns:1fr}.head{align-items:flex-start;flex-direction:column}.gallery .photo:first-child{height:320px}.gallery-side{grid-template-columns:1fr 1fr}.wrap{width:min(100% - 28px,1180px)}}
+:root{--g:#173f32;--g2:#2f6b4f;--sage:#e1ebe2;--cream:#f7f5ef;--dark:#17211d;--muted:#68756e;--white:#fff}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--cream);color:var(--dark);line-height:1.6}a{text-decoration:none;color:inherit}
+.demo{background:#102d24;color:#fff;text-align:center;padding:8px;font-size:12px;letter-spacing:.08em}
+header{position:sticky;top:0;z-index:50;background:rgba(247,245,239,.96);backdrop-filter:blur(12px);border-bottom:1px solid #dce3dc}.nav{max-width:1180px;width:92%;margin:auto;height:76px;display:flex;align-items:center;justify-content:space-between}.logo{font-weight:900;font-size:21px;letter-spacing:.08em}.logo small{display:block;color:var(--g2);font-size:9px;letter-spacing:.2em}
+nav{display:flex;gap:3px;align-items:center}nav>a,.dropbtn{font-weight:700;font-size:14px;padding:12px 13px;border-radius:10px;cursor:pointer}nav>a:hover,.drop:hover .dropbtn{background:var(--sage)}.drop{position:relative}.menu{display:none;position:absolute;top:49px;left:0;min-width:220px;background:#fff;border:1px solid #dce3dc;border-radius:14px;box-shadow:0 18px 45px #123a2020;padding:7px}.drop:hover .menu{display:block}.menu a{display:block;padding:10px 12px;border-radius:9px;font-size:14px}.menu a:hover{background:var(--sage)}.contactbtn{background:var(--g);color:#fff!important}
+.container{width:min(1180px,92%);margin:auto}section{padding:88px 0}.hero{min-height:650px;display:flex;align-items:center;background:linear-gradient(90deg,#102d24dc,#102d2450),url('https://images.unsplash.com/photo-1558904541-efa843a96f01?auto=format&fit=crop&w=1800&q=85') center/cover;color:#fff}.hero-inner{max-width:780px}.eyebrow,.kicker{font-size:12px;font-weight:900;letter-spacing:.16em;text-transform:uppercase}.hero h1{font-size:clamp(44px,7vw,78px);line-height:1;margin:18px 0}.hero p{font-size:20px;max-width:680px}.buttons{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}.btn{display:inline-block;padding:14px 21px;border-radius:999px;background:#fff;color:var(--g);font-weight:800}.btn.dark{background:var(--g);color:#fff}.btn.outline{background:transparent;border:1px solid #ffffff99;color:#fff}
+.head{max-width:730px;margin-bottom:40px}.head h2{font-size:clamp(32px,4vw,52px);line-height:1.08;margin:8px 0}.head p{color:var(--muted)}.kicker{color:var(--g2)}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.card{background:#fff;border:1px solid #dce3dc;border-radius:22px;padding:27px;box-shadow:0 8px 25px #173f3210}.card .icon{width:46px;height:46px;border-radius:14px;background:var(--sage);display:grid;place-items:center;font-size:21px}.card h3{margin:12px 0 7px}.card p{margin:0;color:var(--muted)}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}.photo{height:500px;border-radius:28px;background:url('https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?auto=format&fit=crop&w=1200&q=85') center/cover}.green{background:var(--g);color:#fff}.green p{color:#d9e8df}.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:28px}.stat{background:#ffffff15;border:1px solid #ffffff20;border-radius:16px;padding:15px}.stat strong{font-size:27px;display:block}.stat span{font-size:12px}
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.pic{height:260px;border-radius:20px;background-position:center;background-size:cover;position:relative}.pic span{position:absolute;left:12px;bottom:12px;background:#102d24dc;color:#fff;border-radius:99px;padding:6px 10px;font-size:12px}.p1{background-image:url('https://images.unsplash.com/photo-1598902108854-10e335adac99?auto=format&fit=crop&w=900&q=85')}.p2{background-image:url('https://images.unsplash.com/photo-1558521958-0a228e77e984?auto=format&fit=crop&w=900&q=85')}.p3{background-image:url('https://images.unsplash.com/photo-1589923188900-85dae523342b?auto=format&fit=crop&w=900&q=85')}.p4{background-image:url('https://images.unsplash.com/photo-1599685315640-8b0f5f2e8e6d?auto=format&fit=crop&w=900&q=85')}.notice{background:#fff5d9;border:1px solid #ead9a7;padding:15px;border-radius:14px;color:#5e4d1c;margin-bottom:25px}
+.jobs{display:grid;gap:12px}.job{background:#fff;border:1px solid #dce3dc;border-radius:15px;padding:17px 20px;font-weight:800;display:flex;justify-content:space-between}
+.contactgrid{display:grid;grid-template-columns:1fr 1fr;gap:22px}.box{background:#fff;border:1px solid #dce3dc;border-radius:22px;padding:28px}.box a{color:var(--g2);font-weight:800}input,textarea{width:100%;padding:13px;border:1px solid #ccd7ce;border-radius:11px;margin:6px 0;font:inherit}
+footer{background:#12241e;color:#dce8df;padding:55px 0 22px}.foot{display:grid;grid-template-columns:2fr 1fr 1fr;gap:40px}.foot p,.foot a{color:#aebdb4}.copy{border-top:1px solid #31463d;margin-top:35px;padding-top:18px;font-size:12px}
+@media(max-width:850px){nav{display:none}.grid,.gallery,.split,.contactgrid,.foot{grid-template-columns:1fr}.hero{min-height:570px}.photo{height:350px}.stats{grid-template-columns:1fr 1fr}}
 </style>
 </head>
 <body>
-<header><div class="wrap nav">
-<a class="logo" href="#start" onclick="show('start')">ABI <span>PLAVA · GARTEN & LANDSCHAFT</span></a>
-<nav class="menu">
-<button data-page="start">Startseite</button>
-<button data-page="leistungen">Leistungen</button>
-<button data-page="projekte">Projekte</button>
-<button data-page="galerie">Galerie</button>
-<button data-page="ueber-uns">Über uns</button>
-<button data-page="jobs">Jobs</button>
-<button data-page="kontakt">Kontakt</button>
-</nav></div></header>
+<div class="demo">WEBSITE-ENTWURF · DEMO · INHALTE UND BILDER KÖNNEN GEÄNDERT WERDEN</div>
 
-<main>
-<section id="start" class="active">
-<div class="hero"><div class="wrap hero-grid">
-<div><div class="eyebrow">Garten · Landschaft · Außenanlagen</div>
-<h1>Wir machen aus <span>Ideen</span> Außenräume.</h1>
-<p>Ein moderner Website-Entwurf für ABI PLAVA – mit klaren Leistungsbereichen, Referenzen, Galerie, Unternehmensseite und direktem Kontakt.</p>
-<div class="actions"><button class="btn" onclick="show('kontakt')">Projekt anfragen →</button><button class="btn alt" onclick="show('projekte')">Projekte ansehen</button></div></div>
-<div class="hero-photo"><img src="https://images.unsplash.com/photo-1558904541-efa843a96f01?auto=format&fit=crop&w=1200&q=85" alt="Gartenanlage"></div>
-</div></div>
-</section>
+<header><div class="nav">
+<a class="logo" href="#start">ABI PLAVA<small>GARTEN · LANDSCHAFT · HANDWERK</small></a>
+<nav>
+<a href="#start">Startseite</a>
+<div class="drop"><span class="dropbtn">Leistungen ▾</span><div class="menu"><a href="#leistungen">Alle Leistungen</a><a href="#leistungen">Garten & Landschaft</a><a href="#leistungen">Pflasterarbeiten</a><a href="#leistungen">Erd- & Baggerarbeiten</a></div></div>
+<div class="drop"><span class="dropbtn">Unternehmen ▾</span><div class="menu"><a href="#unternehmen">Über uns</a><a href="#geschichte">Geschichte</a><a href="#werte">Werte</a></div></div>
+<a href="#projekte">Projekte</a>
+<div class="drop"><span class="dropbtn">Karriere ▾</span><div class="menu"><a href="#karriere">Arbeiten bei ABI PLAVA</a><a href="#karriere">Offene Stellen</a><a href="#karriere">Ausbildung</a></div></div>
+<a class="contactbtn" href="#kontakt">Kontakt</a>
+</nav>
+</div></header>
 
-<section id="leistungen"><div class="wrap"><div class="head"><div><div class="eyebrow">Was wir machen</div><h2>Leistungen klar sortiert.</h2></div><p>Statt einer langen Aufzählung bekommt jede Leistung ihren eigenen Platz und kann später um echte Bilder und Details ergänzt werden.</p></div>
-<div class="grid3">
-<div class="card"><div class="icon">🌿</div><h3>Garten- & Landschaftsbau</h3><p>Neugestaltung, Außenanlagen und individuelle Gartenprojekte.</p></div>
-<div class="card"><div class="icon">🧱</div><h3>Pflaster & Naturstein</h3><p>Terrassen, Wege, Zufahrten, Mauern und weitere Steinflächen.</p></div>
-<div class="card"><div class="icon">🏡</div><h3>Terrassen & Außenräume</h3><p>Neue Aufenthaltsbereiche rund ums Haus – funktional und passend zum Grundstück.</p></div>
-<div class="card"><div class="icon">🚜</div><h3>Erd- & Baggerarbeiten</h3><p>Vorbereitung, Erdbewegung und Arbeiten mit Maschinen.</p></div>
-<div class="card"><div class="icon">🪵</div><h3>Zäune & Sichtschutz</h3><p>Abgrenzungen, Sichtschutz und passende Lösungen für Grundstücke.</p></div>
-<div class="card"><div class="icon">🏠</div><h3>Arbeiten rund ums Haus</h3><p>Weitere Arbeiten wie Dachreinigung, Reparaturen und Außenbereiche.</p></div>
-</div></div></section>
-
-<section id="projekte" class="dark"><div class="wrap"><div class="head"><div><div class="eyebrow">Referenzen</div><h2>Projekte, die für sich sprechen.</h2></div><p>Hier kann später jedes echte Projekt mit Vorher/Nachher, Bildern und kurzer Beschreibung präsentiert werden.</p></div>
-<div class="grid3">
-<div class="card"><div class="photo"><img src="https://images.unsplash.com/photo-1598902108854-10e335adac99?auto=format&fit=crop&w=900&q=85" alt=""></div><h3>Garten-Neugestaltung</h3><p>Platzhalter für ein echtes Projekt.</p></div>
-<div class="card"><div class="photo"><img src="https://images.unsplash.com/photo-1558521958-0a228e77e984?auto=format&fit=crop&w=900&q=85" alt=""></div><h3>Terrasse & Naturstein</h3><p>Platzhalter für Projektdetails.</p></div>
-<div class="card"><div class="photo"><img src="https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?auto=format&fit=crop&w=900&q=85" alt=""></div><h3>Außenanlage</h3><p>Platzhalter für Referenzfotos.</p></div>
-</div></div></section>
-
-<section id="galerie"><div class="wrap"><div class="head"><div><div class="eyebrow">Galerie</div><h2>Einblicke in die Arbeit.</h2></div><p>Die Galerie kann später vollständig mit eigenen Bildern gefüllt werden. Genau hier könnten wir bei einem lokalen Auftrag auch eigene Fotos vor Ort erstellen.</p></div>
-<div class="gallery"><div class="photo"><img src="https://images.unsplash.com/photo-1589923188900-85dae523342b?auto=format&fit=crop&w=1200&q=85" alt=""></div><div class="gallery-side"><div class="photo"><img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=900&q=85" alt=""></div><div class="photo"><img src="https://images.unsplash.com/photo-1558904541-efa843a96f01?auto=format&fit=crop&w=900&q=85" alt=""></div></div></div>
-<div class="note">Demo-Hinweis: Die Fotos sind Platzhalter aus dem Internet. Bei einem echten Auftrag sollten sie durch freigegebene Firmenfotos ersetzt werden. Eigene Aufnahmen vor Ort wären dafür ideal.</div>
+<main id="start">
+<section class="hero"><div class="container hero-inner">
+<div class="eyebrow">Moderner Website-Entwurf · ABI PLAVA</div>
+<h1>Außenräume,<br>die bleiben.</h1>
+<p>Garten- und Landschaftsbau, Pflasterarbeiten und Arbeiten rund um Haus & Garten – zuverlässig, sauber und persönlich.</p>
+<div class="buttons"><a class="btn" href="#kontakt">Projekt anfragen</a><a class="btn outline" href="#leistungen">Leistungen entdecken</a></div>
 </div></section>
 
-<section id="ueber-uns"><div class="wrap"><div class="head"><div><div class="eyebrow">Das Unternehmen</div><h2>Wer steckt hinter ABI PLAVA?</h2></div><p>Die Unternehmensgeschichte und Arbeitsweise bekommen einen eigenen Bereich, statt zwischen Leistungslisten unterzugehen.</p></div>
-<div class="two"><div class="feature"><h3>Seit 2012</h3><p>ABI PLAVA ist laut eigener Website ein Einzelunternehmen mit Sitz in Baden-Baden und wurde 2012 gegründet.</p><p>Das Unternehmen bietet unter anderem Garten- und Landschaftsbau, Pflasterarbeiten, Dacharbeiten, Terrassen, Zäune, Carports sowie Erd- und Baggerarbeiten an.</p></div><div class="feature"><h3>Unser Anspruch</h3><p>Schnell, zuverlässig und preiswert – mit professioneller und sauberer Arbeit.</p><p>Hier könnten später echte Teamfotos, Firmenfahrzeuge, Maschinen und die Geschichte des Betriebs ergänzt werden.</p></div></div></div></section>
+<section><div class="container"><div class="head"><div class="kicker">ABI PLAVA</div><h2>Handwerk für Garten, Hof und Außenanlagen.</h2><p>Der Entwurf zeigt, wie die bisherige Website in eine professionelle Unternehmensseite mit klarer Navigation und echten Unterbereichen umgebaut werden kann.</p></div>
+<div class="grid">
+<div class="card"><div class="icon">🌿</div><h3>Garten & Landschaft</h3><p>Gartengestaltung, Pflege, Bepflanzung und Außenanlagen.</p></div>
+<div class="card"><div class="icon">▦</div><h3>Pflaster & Wege</h3><p>Terrassen, Wege, Zufahrten, Eingänge und Naturstein.</p></div>
+<div class="card"><div class="icon">⌂</div><h3>Rund ums Grundstück</h3><p>Zäune, Carports, Erdarbeiten, Abriss und weitere Arbeiten.</p></div>
+</div></div></section>
 
-<section id="jobs" class="dark"><div class="wrap"><div class="head"><div><div class="eyebrow">Karriere</div><h2>Jobs & Möglichkeiten.</h2></div><p>Ein eigener Bereich macht Bewerbungen einfacher und gibt einem kleinen Betrieb eine professionellere Außenwirkung.</p></div>
-<div class="steps"><div class="step"><div class="num">01</div><h3>Offene Stellen</h3><p>Aktuelle Stellenangebote übersichtlich präsentieren.</p></div><div class="step"><div class="num">02</div><h3>Ausbildung</h3><p>Falls Ausbildungsplätze angeboten werden, direkt sichtbar machen.</p></div><div class="step"><div class="num">03</div><h3>Quereinsteiger</h3><p>Geeignete Bewerber unkompliziert ansprechen.</p></div><div class="step"><div class="num">04</div><h3>Bewerben</h3><p>Direkter Kontakt statt komplizierter Umwege.</p></div></div></div></section>
+<section class="green" id="unternehmen"><div class="container split"><div>
+<div class="kicker">Über uns</div><h2>Persönlich geplant. Sauber umgesetzt.</h2>
+<p>ABI PLAVA ist ein Einzelunternehmen mit Sitz in Baden-Baden. Nach den bisherigen öffentlich verfügbaren Angaben wurde der Betrieb 2012 gegründet.</p>
+<p>Hier kann später die echte Geschichte des Unternehmens, das Team und die Entwicklung des Betriebs ausführlich vorgestellt werden.</p>
+<div class="stats"><div class="stat"><strong>2012</strong><span>Gründung</span></div><div class="stat"><strong>9+</strong><span>Leistungsbereiche</span></div><div class="stat"><strong>Regional</strong><span>Baden-Baden & Umgebung</span></div></div>
+</div><div class="photo"></div></div></section>
 
-<section id="kontakt"><div class="wrap"><div class="head"><div><div class="eyebrow">Kontakt</div><h2>Projekt starten.</h2></div><p>Adresse, Telefon und E-Mail an einer Stelle – auf dem Handy genauso leicht erreichbar wie am PC.</p></div>
-<div class="contact"><div class="contactbox"><h3>ABI PLAVA</h3><p>Sinzheimer Str. 27<br>76532 Baden-Baden</p><p><strong>Telefon</strong><br>0172 7447394<br>07221 801280</p><p><strong>E-Mail</strong><br>abi.plava@hotmail.de</p></div><div class="contactbox"><h3>Ihre Idee</h3><p>Beschreiben Sie kurz, was Sie planen. Auf einer echten Website könnte hier ein Anfrageformular eingebaut werden.</p><button class="btn" onclick="location.href='mailto:abi.plava@hotmail.de?subject=Anfrage'">E-Mail schreiben →</button></div></div></div></section>
+<section id="geschichte"><div class="container"><div class="head"><div class="kicker">Geschichte</div><h2>Wie ABI PLAVA entstanden ist.</h2><p>Dieser Bereich ist bewusst als eigener Unterbereich vorbereitet. Hier können später die tatsächlichen Meilensteine, die Entstehung des Betriebs und die Entwicklung bis heute erzählt werden.</p></div><div class="grid"><div class="card"><h3>01 · Gründung</h3><p>Die Unternehmensgeschichte beginnt 2012.</p></div><div class="card"><h3>02 · Entwicklung</h3><p>Platz für Wachstum, neue Leistungen und wichtige Projekte.</p></div><div class="card"><h3>03 · Heute</h3><p>Aktuelle Leistungen, Team und Einsatzgebiet.</p></div></div></div></section>
+
+<section id="werte" class="green"><div class="container"><div class="head"><div class="kicker">Unsere Werte</div><h2>Worauf es bei guter Arbeit ankommt.</h2><p>Die konkreten Unternehmenswerte können im nächsten Schritt mit ABI PLAVA abgestimmt werden.</p></div><div class="grid"><div class="card"><h3>Zuverlässigkeit</h3><p>Klare Absprachen und eine saubere Umsetzung.</p></div><div class="card"><h3>Qualität</h3><p>Fachgerechte Arbeit und ein Ergebnis, das langfristig überzeugt.</p></div><div class="card"><h3>Persönliche Beratung</h3><p>Individuelle Lösungen statt Standardlösungen.</p></div></div></div></section>
+
+<section id="leistungen"><div class="container"><div class="head"><div class="kicker">Leistungen</div><h2>Was wir für Sie umsetzen.</h2><p>Jede dieser Leistungen kann später zusätzlich eine eigene Detailseite mit Bildern, Ablauf und Referenzen bekommen.</p></div>
+<div class="grid">
+<div class="card"><div class="icon">🌱</div><h3>Garten- & Landschaftsbau</h3><p>Gartengestaltung, Außenanlagen, Bepflanzung, Büsche und Bäume.</p></div>
+<div class="card"><div class="icon">▦</div><h3>Pflasterarbeiten</h3><p>Wege, Terrassen, Eingänge, Zufahrten und Garagenvorplätze.</p></div>
+<div class="card"><div class="icon">◈</div><h3>Natur- & Kunststein</h3><p>Stufen, Mauern, Terrassen und Gestaltungselemente.</p></div>
+<div class="card"><div class="icon">⌂</div><h3>Zäune & Sichtschutz</h3><p>Abgrenzungen und Sichtschutz für Grundstücke und Gärten.</p></div>
+<div class="card"><div class="icon">▰</div><h3>Terrassen & Carports</h3><p>Terrassenbau, Podeste, Carports und Gartenhäuser.</p></div>
+<div class="card"><div class="icon">🚜</div><h3>Erd- & Baggerarbeiten</h3><p>Durchbruch, Abriss, Erdarbeiten und vorbereitende Arbeiten.</p></div>
+<div class="card"><div class="icon">🏊</div><h3>Pool & Schwimmbecken</h3><p>Arbeiten und Außenbereiche rund um Poolprojekte.</p></div>
+<div class="card"><div class="icon">🌾</div><h3>Rollrasen & Pflege</h3><p>Rollrasen verlegen und Pflege von Außenanlagen.</p></div>
+<div class="card"><div class="icon">🏠</div><h3>Dachreinigung & Reparatur</h3><p>Dachreinigung und Dachreparaturen.</p></div>
+</div></div></section>
+
+<section id="projekte"><div class="container"><div class="head"><div class="kicker">Projekte & Galerie</div><h2>Unsere Arbeit soll man sehen.</h2><p>Die folgenden Bilder sind nur Platzhalter für den Entwurf. Für die finale Website werden freigegebene Firmenfotos eingesetzt.</p></div>
+<div class="notice">⚠️ Demo-Bilder: nicht als finale Firmenbilder verwenden. Später können hier echte Baustellen-, Team- und Projektfotos stehen.</div>
+<div class="gallery"><div class="pic p1"><span>Gartengestaltung</span></div><div class="pic p2"><span>Terrasse</span></div><div class="pic p3"><span>Pflasterarbeiten</span></div><div class="pic p4"><span>Außenanlage</span></div><div class="pic p1"><span>Gartenpflege</span></div><div class="pic p2"><span>Vorher · Nachher</span></div></div></div></section>
+
+<section id="karriere" class="green"><div class="container"><div class="head"><div class="kicker">Karriere</div><h2>Arbeiten bei ABI PLAVA.</h2><p>Ein eigener Karrierebereich wie bei professionellen Unternehmenswebsites – vorbereitet für echte Stellenangebote.</p></div><div class="jobs"><div class="job">Offene Stellen <span>→</span></div><div class="job">Ausbildung <span>→</span></div><div class="job">Initiativ bewerben <span>→</span></div></div></div></section>
+
+<section id="kontakt"><div class="container contactgrid"><div class="box"><div class="kicker">Kontakt</div><h2>Wir sind gerne für Sie da.</h2><p>ABI PLAVA<br>Sinzheimerstr. 27<br>76532 Baden-Baden</p><p><strong>Telefon:</strong><br><a href="tel:+491727447394">0172 7447394</a><br><a href="tel:+497221801280">07221 / 801280</a></p><p><strong>E-Mail:</strong><br><a href="mailto:abi.plava@hotmail.de">abi.plava@hotmail.de</a></p><p><strong>Einsatzgebiet:</strong><br>Baden-Baden, Rastatt, Bühl, Achern, Offenburg, Karlsruhe, Ettlingen und Umgebung.</p></div>
+<div class="box"><div class="kicker">Projekt anfragen</div><h2>Erzählen Sie uns von Ihrem Vorhaben.</h2><p style="color:var(--muted)">Das Formular ist im Entwurf eine Demonstration. Für die finale Website kann es direkt mit dem gewünschten Kontaktweg verbunden werden.</p>
+<form onsubmit="event.preventDefault();alert('Demo: Das Formular würde jetzt an ABI PLAVA übermittelt.');"><input required placeholder="Name"><input required type="email" placeholder="E-Mail"><textarea required rows="6" placeholder="Was soll gemacht werden?"></textarea><button class="btn dark" style="border:0;cursor:pointer">Anfrage senden</button></form></div></div></section>
 </main>
-<footer><div class="wrap">Unverbindlicher Website-Entwurf für ABI PLAVA · Platzhalterbilder müssen vor einer Veröffentlichung durch freigegebene Firmenbilder ersetzt werden.</div></footer>
-<script>
-const sections=[...document.querySelectorAll('main section')],buttons=[...document.querySelectorAll('.menu button')];
-function show(id){sections.forEach(s=>s.classList.toggle('active',s.id===id));buttons.forEach(b=>b.classList.toggle('active',b.dataset.page===id));history.replaceState(null,'','#'+id);window.scrollTo({top:0,behavior:'smooth'});}
-buttons.forEach(b=>b.onclick=()=>show(b.dataset.page));
-const id=location.hash.slice(1);show(document.getElementById(id)?id:'start');
-</script>
+
+<footer><div class="container"><div class="foot"><div><h3>ABI PLAVA</h3><p>Professioneller Website-Entwurf mit Startseite, Unterbereichen, Leistungen, Projekten, Karriere und Kontakt.</p></div><div><h4>Navigation</h4><p><a href="#unternehmen">Unternehmen</a><br><a href="#leistungen">Leistungen</a><br><a href="#projekte">Projekte</a><br><a href="#karriere">Karriere</a></p></div><div><h4>Kontakt</h4><p><a href="tel:+491727447394">0172 7447394</a><br><a href="mailto:abi.plava@hotmail.de">abi.plava@hotmail.de</a></p></div></div><div class="copy">© ABI PLAVA · Website-Entwurf / Demo · Inhalte und Bilder vor Veröffentlichung prüfen</div></div></footer>
 </body></html>
